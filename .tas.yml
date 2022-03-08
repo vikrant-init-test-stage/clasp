@@ -2,8 +2,8 @@ framework: mocha
 preRun:
      command:
         - export NPM_GLOBAL=$HOME/temp-module
-        - mkdir NPM_GLOBAL
-        - npm config --global set prefix NPM_GLOBAL
+        - mkdir $NPM_GLOBAL
+        - npm config --global set prefix $NPM_GLOBAL
         - npm install typescript
         - echo "$DOT_CLASPRC" >> $HOME/.clasprc.json
         - npm run build
