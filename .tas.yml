@@ -1,9 +1,6 @@
 framework: mocha
 preRun:
      command:
-        - export NPM_GLOBAL=$HOME/temp-module
-        - mkdir $NPM_GLOBAL
-        - npm config --global set prefix $NPM_GLOBAL
         - npm install typescript
         - echo "$DOT_CLASPRC" >> $HOME/.clasprc.json
         - npm run build
@@ -12,10 +9,10 @@ preRun:
         - npm run pretest
 preMerge:
   pattern:
-    - "./build/test/files.js"
+    - "./build/test/*.js"
 postMerge:
   pattern:
-    - "./build/test/files.js"
+    - "./build/test/*.js"
 postRun:
      command:
         - node --version
