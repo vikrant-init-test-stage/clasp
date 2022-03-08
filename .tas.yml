@@ -1,9 +1,11 @@
 framework: mocha
 preRun:
      command:
+        - mkdir $PWD/temp-module
+        - npm config --global set prefix $PWD/temp-module
         - npm install typescript
         - echo "$DOT_CLASPRC" >> $HOME/.clasprc.json
-        - npm run build-fresh
+        - npm run build
         - export SCRIPT_ID=1EwE84eZCSBPcaAiJzCnDjmxMVnLQrDyhSKq1oZY6q-3x4BIDHgQefCnL
         - export PROJECT_ID=project-id-3961473932623644264
         - npm run pretest
