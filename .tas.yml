@@ -1,7 +1,7 @@
 framework: mocha
 preRun:
      command:
-        - npm install typescript -g
+        - npm install typescript
         - echo "$DOT_CLASPRC" >> $HOME/.clasprc.json
         - npm run build
         - export SCRIPT_ID=1EwE84eZCSBPcaAiJzCnDjmxMVnLQrDyhSKq1oZY6q-3x4BIDHgQefCnL
