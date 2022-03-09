@@ -15,7 +15,7 @@
     "docs",
     "build/src"
   ],
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "npm run compile && npm i  --loglevel=error --force",
     "build-fresh": "npm cache clean --force && npm i && npm run build",
