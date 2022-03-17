@@ -11,6 +11,9 @@ preMerge:
   pattern:
     - "./build/test/*.js"
 postMerge:
+  env:
+     SCRIPT_ID: 1EwE84eZCSBPcaAiJzCnDjmxMVnLQrDyhSKq1oZY6q-3x4BIDHgQefCnL
+     PROJECT_ID: project-id-3961473932623644264
   pattern:
     - "./build/test/*.js"
 postRun:
